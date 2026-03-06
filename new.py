@@ -17,13 +17,12 @@ else:
     st.write("Waiting for you to click the button...")
 
 
-
 @app.route('/')
 def home():
     return "Welcome to the Flask app! This is the home page."
 
 
-st.link_button("What is pizza??", "http://127.0.0.1:5000//pizza")
+st.link_button("What is pizza??", "http://127.0.0.1:5000/pizza")
 
 
 @app.route('/pizza')
@@ -33,4 +32,4 @@ def pizza():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
